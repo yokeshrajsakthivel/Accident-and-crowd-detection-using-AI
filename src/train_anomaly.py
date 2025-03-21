@@ -1,5 +1,6 @@
 import numpy as np
 import pickle
+import os
 from sklearn.ensemble import IsolationForest
 
 # Simulated data: [speed, movement variance, direction variance]
@@ -12,6 +13,9 @@ labels = np.array([1] * 500 + [-1] * 50)  # 1 = Normal, -1 = Anomaly
 # Train Isolation Forest
 model = IsolationForest(contamination=0.1, random_state=42)
 model.fit(data)
+
+# Ensure the 'models' directory exists
+os.makedirs("models", exist_ok=True)
 
 # Save model
 with open("models/anomaly_detector.pkl", "wb") as f:
