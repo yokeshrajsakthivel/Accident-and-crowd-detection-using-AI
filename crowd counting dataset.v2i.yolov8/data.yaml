@@ -1,0 +1,13 @@
+train: ../train/images
+val: ../valid/images
+test: ../test/images
+
+nc: 1
+names: ['people']
+
+roboflow:
+  workspace: crowd-dataset
+  project: crowd-counting-dataset-w3o7w
+  version: 2
+  license: CC BY 4.0
+  url: https://universe.roboflow.com/crowd-dataset/crowd-counting-dataset-w3o7w/dataset/2

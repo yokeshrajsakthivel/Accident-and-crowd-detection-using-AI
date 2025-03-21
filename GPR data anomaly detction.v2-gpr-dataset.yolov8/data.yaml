@@ -1,0 +1,13 @@
+train: ../train/images
+val: ../valid/images
+test: ../test/images
+
+nc: 1
+names: ['anomaly']
+
+roboflow:
+  workspace: aorvis
+  project: gpr-data-anomaly-detction
+  version: 2
+  license: CC BY 4.0
+  url: https://universe.roboflow.com/aorvis/gpr-data-anomaly-detction/dataset/2
